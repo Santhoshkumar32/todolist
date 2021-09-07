@@ -1,0 +1,1 @@
+web gunicorn locser.wsgi:application --log-file -
