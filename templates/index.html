@@ -133,13 +133,13 @@ input {
   <form action="" method="POST">
     {% csrf_token %}
     <input type="text" name="title" id="myInput" placeholder="Title...">
-    <input  type="submit" class="addBtn">Add</button>
+    <button  type="submit" class="addBtn">Add</button>
   </form>
 </div>
 
 <ul id="myUL">
   {% for todo in Todo reversed %}
-  <li>{{todo.title}} <span class="close"><a style="text-decoration: none; color: black;" href="delete/{{todo.id}}">Delete</a></span></li>
+  <li>{{todo.title | title}} <span class="close"><a style="text-decoration: none; color: black;" href="delete/{{todo.id}}">Delete</a></span></li>
   {% endfor %}
 </ul>
 
